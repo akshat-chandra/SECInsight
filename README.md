@@ -27,19 +27,19 @@ SECInsight lets you ask plain English questions about any company's SEC 10-K ann
 
 ```
 SEC EDGAR API
-      ↓
-  sec_fetcher.py       ← fetches latest 10-K, parses iXBRL HTML
-      ↓
-  chunker.py           ← splits text into 800-word chunks with 100-word overlap
-      ↓
-  vector_store.py      ← embeds chunks and stores in ChromaDB (ONNX embeddings)
-      ↓
-  query.py             ← retrieves top 8 relevant chunks, streams answer via Claude API
-      ↓
-  app.py               ← Streamlit chat interface with session state
+      |
+  sec_fetcher.py       <- fetches latest 10-K, parses iXBRL HTML
+      |
+  chunker.py           <- splits text into 800-word chunks with 100-word overlap
+      |
+  vector_store.py      <- embeds chunks and stores in ChromaDB (ONNX embeddings)
+      |
+  query.py             <- retrieves top 8 relevant chunks, streams answer via Claude API
+      |
+  app.py               <- Streamlit chat interface with session state
 ```
 
-**Anti-hallucination by design** — Claude is instructed via system prompt to answer only from the provided excerpts. If the answer isn't in the filing, it says so.
+Anti-hallucination by design: Claude is instructed via system prompt to answer only from the provided excerpts. If the answer is not in the filing, it says so.
 
 ---
 
@@ -69,13 +69,13 @@ echo "ANTHROPIC_API_KEY=your_key_here" > .env
 streamlit run app.py
 ```
 
-Then select a company, click **Fetch & Index**, and start asking questions.
+Then select a company, click Fetch and Index, and start asking questions.
 
 ---
 
 ## Data Source
 
-SEC EDGAR — public API at `data.sec.gov`. All 10-K filings are publicly available. No authentication required.
+SEC EDGAR public API at data.sec.gov. All 10-K filings are publicly available. No authentication required.
 
 ---
 
