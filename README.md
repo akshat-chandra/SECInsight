@@ -14,12 +14,12 @@ SECInsight lets you ask plain English questions about any company's SEC 10-K ann
 
 ## Features
 
-- **RAG pipeline** — retrieves the most relevant chunks from the filing before generating an answer, grounding Claude's response in the actual document
-- **Conversational memory** — follow-up questions are answered in context of the conversation history
-- **Compare mode** — select multiple companies and get side-by-side answers to the same question
-- **Source linking** — every answer includes a link back to the SEC EDGAR filing and expandable excerpts showing exactly what was used
-- **Example questions** — one-click prompts to explore common filing topics
-- **8 companies pre-loaded** — Apple, Microsoft, Google, Meta, Amazon, Snowflake, Salesforce, Nvidia
+- **RAG pipeline**: retrieves the most relevant chunks from the filing before generating an answer, grounding Claude's response in the actual document
+- **Conversational memory**: follow-up questions are answered in context of the conversation history
+- **Compare mode**: select multiple companies and get side-by-side answers to the same question
+- **Source linking**: every answer includes a link back to the SEC EDGAR filing and expandable excerpts showing exactly what was used
+- **Example questions**: one-click prompts to explore common filing topics
+- **8 companies pre-loaded**: Apple, Microsoft, Google, Meta, Amazon, Snowflake, Salesforce, Nvidia
 
 ---
 
